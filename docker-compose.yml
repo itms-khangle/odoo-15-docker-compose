@@ -11,14 +11,14 @@ services:
     volumes:
         - ./postgresql:/var/lib/postgresql/data
 
-  odoo15:
-    image: odoo:15
+  odoo16:
+    image: odoo:16
     user: root
     depends_on:
       - db
     ports:
-      - "10015:8069"
-      - "20015:8072" # live chat
+      - "10016:8069"
+      - "20016:8072" # live chat
     tty: true
     command: --
     environment:
